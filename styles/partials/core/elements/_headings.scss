@@ -1,0 +1,10 @@
+@use '../../../modules/variables' as vars;
+@use '../../../modules/typography/fonts';
+
+h1, h2, h3, h4, h5, h6, p {
+	@include fonts.main-bold-font(vars.$font-size-large);
+	color: vars.$primary;
+	line-height: 1.25;
+	margin: 0;
+	text-transform: uppercase;
+}

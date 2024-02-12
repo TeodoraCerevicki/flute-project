@@ -1,0 +1,6 @@
+@use '../../../modules/variables' as vars;
+
+.main-title {
+    font-size: vars.$large-gap;
+    margin-bottom: vars.$small-gap;
+}

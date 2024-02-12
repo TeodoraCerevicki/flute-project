@@ -1,0 +1,26 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/typography/fonts';
+
+.main-nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color: #fff;
+
+    .list {
+        display: flex;
+    }
+
+    .link {
+        @include fonts.main-bold-font(vars.$font-size-large);
+        padding: vars.$default-gap vars.$default-gap vars.$small-gap;
+        border-bottom: 2px solid transparent;
+        text-transform: uppercase;
+        color: vars.$primary;
+        font-size: 18px;
+
+        &.active, &:hover {
+            border-bottom-color: vars.$primary;
+        }
+    }
+}

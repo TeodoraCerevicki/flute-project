@@ -1,0 +1,23 @@
+@use '../../variables' as vars;
+
+@mixin default($size: 4px) {
+    position: relative;
+    width: 200px;
+    height: $size;
+    background-color: vars.$primary;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: $size;
+        height: $size;
+        background-color: #fff;
+    }
+
+    &::before {
+        right: calc($size * 3 + 2px);
+    }
+
+    &::after {
+        right: calc($size + 1px);
+    }
+}

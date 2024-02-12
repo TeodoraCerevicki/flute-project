@@ -1,0 +1,6 @@
+
+@use '../../../modules/components/separators/general' as separators;
+
+.separator {
+    @include separators.default();
+}

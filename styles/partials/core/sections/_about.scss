@@ -1,0 +1,9 @@
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 160px;
+
+    .content, .image {
+        flex: 1;
+    }
+}

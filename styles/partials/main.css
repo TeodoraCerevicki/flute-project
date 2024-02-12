@@ -1,0 +1,269 @@
+img {
+  width: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto-Regular";
+  font-size: 16px;
+  margin: 0;
+  color: #242424;
+}
+body * {
+  outline: none;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, footer, article, aside, ul, li {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+span {
+  line-height: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  color: #242424;
+  transition: 0.3s;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, a:hover::before {
+  color: #242424;
+}
+@media (hover: hover) {
+  a:hover {
+    color: #242424;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Roboto-Bold";
+  font-size: 16px;
+  color: #000;
+  line-height: 1.25;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  color: #242424;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+.accent-button, .primary-button {
+  font-family: "Roboto-Medium";
+  font-size: 14px;
+  min-height: 40px;
+  padding: 10px 16px;
+  transition: 0.2s;
+  border: 1px solid transparent;
+  border-radius: none;
+  line-height: 1.1;
+}
+.accent-button:disabled, .primary-button:disabled {
+  background-color: #8E8F8F;
+  cursor: not-allowed;
+}
+.accent-button:disabled:hover, .primary-button:disabled:hover {
+  background-color: #8E8F8F;
+}
+
+.primary-button {
+  background-color: #000;
+  transition: 0.3s;
+}
+.primary-button:hover {
+  background-color: #C5FAD5;
+}
+
+.accent-button {
+  background-color: #C5FAD5;
+  transition: 0.3s;
+}
+.accent-button:hover {
+  background-color: #000;
+}
+
+.main-nav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+}
+.main-nav .list {
+  display: flex;
+}
+.main-nav .link {
+  font-family: "Roboto-Bold";
+  font-size: 16px;
+  padding: 16px 16px 8px;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 18px;
+}
+.main-nav .link.active, .main-nav .link:hover {
+  border-bottom-color: #000;
+}
+
+.main-header {
+  background-image: url("../../assets/images/desktop/hero-flute.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  background-position: left top;
+  height: 100vh;
+}
+.main-header .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.main-header .title {
+  font-size: 62px;
+}
+.main-header .subtitle {
+  font-size: 30px;
+}
+.main-header .separator {
+  margin: 16px 0;
+}
+
+.main-title {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 160px;
+}
+.about-section .content, .about-section .image {
+  flex: 1;
+}
+
+.first-letter-capitalized {
+  display: inline-block;
+}
+.first-letter-capitalized::first-letter {
+  text-transform: capitalize;
+}
+
+.capitalized {
+  text-transform: uppercase;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.align-vertical {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.draggable {
+  cursor: grab;
+}
+
+.forbidden {
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+.separator {
+  position: relative;
+  width: 200px;
+  height: 4px;
+  background-color: #000;
+}
+.separator::before, .separator::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+}
+.separator::before {
+  right: 14px;
+}
+.separator::after {
+  right: 5px;
+}/*# sourceMappingURL=main.css.map */

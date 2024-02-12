@@ -1,0 +1,27 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/components/backgrounds/generate' as backgrounds;
+
+.main-header {
+    @include backgrounds.image('desktop/hero-flute.jpg');
+    height: 100vh;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .title {
+        font-size: 62px;
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+
+    .separator {
+        margin: vars.$default-gap 0;
+    }
+}

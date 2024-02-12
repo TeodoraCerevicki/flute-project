@@ -1,0 +1,32 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/states/hovers';
+
+%button {
+	@include fonts.main-medium-font();
+	min-height: 40px;
+	padding: 10px vars.$default-gap;
+	transition: .2s;
+	border: 1px solid transparent;
+	border-radius: none;
+	line-height: 1.1;
+
+	&:disabled {
+		background-color: vars.$disabled;
+		cursor: not-allowed;
+
+		&:hover {
+			background-color: vars.$disabled;
+		}
+	}
+}
+
+.primary-button {
+	@extend %button;
+	@include hovers.primary-background-hover();
+}
+
+.accent-button {
+	@extend %button;
+	@include hovers.background-hover(vars.$accent, vars.$primary);
+}
